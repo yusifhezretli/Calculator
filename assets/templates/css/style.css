@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+    
+}
+
+
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(100px, auto) repeat(5, 1fr);
+    gap: 5px;
+    width: 300px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 60px;
+    
+}
+
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+}
+.display {
+    grid-column: span 4;
+    background-color: #333;
+    color: white;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+    border-radius: 5px 5px 0 0;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: contents;
+}
+
+.buttons button {
+    font-size: 1.2em;
+    border: 1px solid #ddd;
+    outline: none;
+    background-color: #fff;
+    color: black;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #eee;
+}
+
+.operator {
+    background-color: #f57c00;
+    color: white;
+}
+
+.operator.clear {
+    background-color: #ff6666;
+}
+
+.operator.equals {
+    background-color: #5997d1;
+    grid-row: span 4;
+}
+
+.operator.clear:hover {
+    background-color: #ff4d4d;
+}
